@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="Theme.LeafLux" parent="android:Theme.Material.Light.NoActionBar" />
+    
+    <style name="Theme.LeafLux.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/purple_200</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.LeafLux</item>
+    </style>
+
 </resources>
