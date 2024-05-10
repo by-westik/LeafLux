@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "LeafLux"
 include(":app")
- 
+include(":features:plants-list")
