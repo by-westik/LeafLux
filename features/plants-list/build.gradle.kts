@@ -33,7 +33,7 @@ android {
     buildFeatures {
         compose = true
         composeOptions {
-            kotlinCompilerExtensionVersion = "1.5.0"
+            kotlinCompilerExtensionVersion = "1.5.13"
         }
     }
 }
@@ -51,4 +51,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(project(":database"))
 }
