@@ -70,4 +70,5 @@ dependencies {
 
 
     implementation(project(":features:plants-list"))
+    implementation(project(":database"))
 }

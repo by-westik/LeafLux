@@ -1,27 +1,27 @@
 package dev.bywestik.database.dao
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import dev.bywestik.database.models.PlantEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PlantsDAO {
 
-    @Query("SELECT * from plants")
-    fun getAll(): List<PlantEntity>
+    @Query("SELECT * FROM plants")
+    fun getAll(): Flow<List<PlantEntity>>
 
     @Insert
-    fun insetAll(plants: List<PlantEntity>)
+    suspend fun insertAll(plants: List<PlantEntity>)
 
     @Insert
-    fun insertPlan(plant: PlantEntity)
+    suspend fun insertPlant(plant: PlantEntity)
 
- /*   @Delete
+    @Query("DELETE FROM plants")
     fun deleteAll()
 
-    @Delete
+    /*@Delete
     fun deletePlant(plant: PlantEntity)*/
 
 }
